@@ -1,0 +1,24 @@
+{
+  "name": "peertopeerchat",
+  "version": "1.0.0",
+  "description": "chat implemented with WebRTC protocol",
+  "main": "app.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abonifacino/peerToPeerChat.git"
+  },
+  "author": "Andrea Bonifacino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abonifacino/peerToPeerChat/issues"
+  },
+  "homepage": "https://github.com/abonifacino/peerToPeerChat#readme",
+  "dependencies": {
+    "express": "^4.15.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.4.3"
+  }
+}

@@ -2,7 +2,10 @@ var domIds = {
   inputMyId: "myUri",
   inputPeerId: "peerUri",
   inputSetMessage: "message",
-  textAreaMessages: "messages"
+  buttonSendMessageId: "buttonSendMessage",
+  textAreaMessages: "messages",
+  buttonUserUriId: "buttonUserUri",
+  chatContainerId : "chatContainer"
 }
 
 var userAgent;
@@ -38,6 +41,10 @@ function setUserUri(){
   var user = $("#"+domIds.inputMyId).val();
   userAgent = setUserAgent(user);
   initUserAgent();
+  $("#"+domIds.buttonUserUriId).prop('disabled', 'disabled');
+  $("#"+domIds.inputMyId).prop('disabled', 'disabled');
+  $("#"+domIds.inputSetMessage).removeAttr('disabled');
+  $("#"+domIds.buttonSendMessageId).removeAttr('disabled');
 }
 
 function setUserAgent(name){
@@ -56,6 +63,10 @@ function initUserAgent(){
 
 function sendMessage(){
   var name = $("#"+domIds.inputPeerId).val();
+  if (!name || name =="") {
+    alert("Error: set the name of your peer firend");
+    return;
+  }
   var message = $("#"+domIds.inputSetMessage).val();
   var peerUri = name+uriSuffix;
   userAgent.message(peerUri, message);

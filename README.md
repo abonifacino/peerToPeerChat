@@ -14,14 +14,6 @@ cd peerToPeerChat
 npm install
 ```
 
-- Build documentation
-
-```
-#!bash
-./node_modules/.bin/jsdoc ./ -r -d docs
-```
-To view the documentation open the index.html file located in the 'docs' folder
-
 - run the project
 ```
 #!bash
